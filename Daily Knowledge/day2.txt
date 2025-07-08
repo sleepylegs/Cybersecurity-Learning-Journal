@@ -1,0 +1,60 @@
+8/7/2025
+
+Today I got started on the basics of subnetting, which basically entails dividing a network into multiple smaller
+parts for better efficiency and security.
+
+LAN TOPOLOGIES:
+There are different topologies or designs through which a network is implemented.
+
+Start topology - looks like a star and is most often used in today's world as it is very efficient. Devices on the 
+network are connected to a central device usually a switch (better than hub). This means that devices send packets 
+(unit of data) to a main, central device which then sends the data forward to the respective recieving device. So the 
+main disadvantage of this network is that if the central device (switch) breaks the entire network breaks.
+
+Bus topology - looks like a typical bus route where devices reside on the left and right side of the main road (cable), 
+which is called the backbone cable in this case. This cable is used to transmit data between devices. The advantage of 
+a bus topology is that it is quite cheap to implement unlike the star topology, but it has a vulnerability when it 
+comes to transmitting large amounts of data. Large amounts of data can break the network causing data loss.
+
+Ring toplogy - looks like a ring (circular network), which is also quite easy and cheap to implement like the bus 
+topology, but it has the disadvantage that is one device breaks or a connection between two devices breaks, the entire 
+network breaks apart as data packets are transmitted in one directions around the entire ring. 
+
+Switch - is a dedicated device on a network that is used to aggregate multiple other devices like computers, mobiles, 
+printers, etc. These are usually found in larger networks such as for schools and offices and boast excellent efficiency
+when is comes to transmitting data and reducing network traffice. Switches are better than repeaters and hubs because 
+they do not repeat the packet being sent to every single port on the network, the switch simply sends it to the intended 
+device. Switches are connected to routers - multiple can be conencted at once so that if one path breaks down, other can 
+be used.
+
+Router - device that connectes networks with each other. It does this by routing (hence the name) data over. Routing 
+is process of data travellign across networks, and is useful when there are multiple devices in the path.
+
+Summary:
+cost effective - bus topology, ring topology
+expensive - star topology
+
+SUBNETTING BASICS:
+Subnetting is a process performed by network adminstrators to divide a network into smaller networks. This is done 
+in the case of different departments under a business such as a network for accounting, for finance, and for human 
+resources etc. Just how an IP address is divided into 4 octets, the subnet mask (a number associated to the number of 
+hosts that can fit in a network) is also divided into a number of four bytes (32 bits), which ranges from 0-255.
+
+Subnets use IP addresses to identify: network address (start of the network), host address (device on the subnet), and 
+default gateway (a device that is capable of sending information to another network).
+
+ARP:
+Address resolution protocol is a technology that is responsible for associating the MAC address (physical identifier) 
+to an IP address on a network. Whenever data needs to be transmitted on a network, the IP address is used to broadcast 
+a message like "Who has the MAc address that owns ... IP address" on the network. This is called the ARP request. 
+The ARp reply is the MAC address that is given by the device that owns the requested IP address. 
+
+DHCP:
+Dynamic host configuration protocol is a server that is used to automatically assign an IP address to a devicec on the 
+network. This assignment can be done manually also but it is usually done through this DHCP server. Process is as follows:
+
+1. DHCP discover - new device on network asks if a DHCP server exists on the network that can provide it with an IP.
+2. DHCP offer - the DHCP (if it exists) offers an IP address.
+3. DHCP request - the new device now confirms it wants to use the given IP address.
+4. DHCP AKG - the last aknowledgement message from the DHCP server saying the process has been completed.
+

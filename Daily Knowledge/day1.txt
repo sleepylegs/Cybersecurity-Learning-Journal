@@ -1,0 +1,33 @@
+7/7/2025
+
+
+Today I delved into the field of cybersecurity by learning through the pre-security modules in TryHackMe.
+I had already finished the intro to cybersecurity module where I learnt about different jobs and categories, like
+the red team or blue team, SOC analyst, penetration tester, cybersecurity architect, incident responder and many others.
+
+Then, I learnt about the basics of networking, which included conceptual knowledge about IP and MAC addresses.
+
+IP address is an abreviation for the term "Internet Protocol", which is basically used as an identifier for the host
+that is sending requests on the internet (a collection of networks). IP addresses are divided into 4 octets and they look
+like this: 192.168.1.1 (represents home address). These IP addresses follow a set of protocols or standards that dictate
+how a device communicates on a network with other devices.
+
+The IP address also comes in two forms, a public IP address and a private IP address. The public IP address is what
+is used whenever data is sent across the internet. However, when two devices want to communicate with each other, they
+use their respective private IP address. The public IP address is basically what you pay the bill for to your internet
+service provider (ISP). 
+
+A crucial problem that has recently come up is that there are too many devices connected to the internet now,
+and since we have been relying on IPv4 (an iteration for the IP), we cannot accomodate all users. IPv4 supports
+only 2^32 IP addresses (4.29 billion) but there are now more devices than that (about 50 billion). So a new iteration
+called IPv6 is gradually being implemented to replace the previous IPv4 iteration as the v6 now supports 2^128
+addresses (340 trillion!), which is more than enough for the forseable future. It is also considered more efficient
+due to recent methodologies. A typical IPv6 address looks like this: 2a00:22c4:a531:c500:425f:cce6:c36b:f64d.
+
+The MAC address is an abreviation of the term "Media Access Control" which is a representation of a physical chip that
+resides inside all devices called the network interface card. This card holds this unique MAC address which is a set 
+of 12 character hexadecimal numbers like: a4:c3:f0:85:ac:2d.
+
+The vulnerability with MAC addresses is that they can be spoofed, meaning an attacker can get hold of your unique 
+MAc address and pretend to send requests on the network as if they were coming from you. This can be an easy bypass
+for a firewall that only allows requests from certain users (whitelist). 
