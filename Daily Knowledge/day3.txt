@@ -1,0 +1,58 @@
+9/7/2025
+
+Today I ventured into the OSI model (open systems interconnection model), which taught me about how all devices on a 
+network send, recieve, and interpret data.
+
+An easy way I learnt to remember this in highschool was through the acronym:
+All Politicians Say Teri Nani Does Physics ("All politicians say your grandmother does physics").
+
+LAYERS:
+
+1. Physical (physics) - 
+The first layer is called the physical later, which - as the name suggests - refers to the physical connections between 
+devices on the network. For instance ethernet cables that connect devices reside on this layer of the OSI model. 
+Data is transmitted through these cables in the binary format (1s and 0s).
+
+2. Data link (does) - 
+The second layer is called the data link layer, and its main role is to present the data in a format suitable for 
+transmission layer on. It does this by associating the physical MAC address ingrained on the recieving device's 
+NIC chip to the IP address of the sender's device.
+
+3. Network (nani) - 
+The third layer is called the network layer and this is where all the data is routed over across the internet to the 
+intended device. Data which had been broken into smaller chunks is now reassembled. Routing involves 3 processes, 
+finding the shortest path, most reliable path (no/ minimal data loss), and the fastest path (fibre > copper). Routers 
+are known as layer 3 devices and they deal simply with the IP addresses of each device. The OSPF (open shortest path first) 
+protocol and the RIP (routing information protcol) are used to determine the best path to route the data.
+
+4. Transport (teri) - 
+This layer dictates protocols that take place when data is being transmitted across the network. Two protocols, TCP and 
+UDP are used based on use case. TCP is an abreviation for transmission control protocol and is used to create a 
+constant connection between 2 devices, and is also known for integrating and error checking process to ensure data sent 
+has been recieved and correctly reassembled at the destination. This makes it a much more slower process than UDP. UDP is 
+an abreviation for user datagram protocol and is not as advanced as the TCP, as it does not have error checking. So, one 
+can just hope that no data is lost through UDP. However, UDP is much faster and is reliably used for tasks such as small 
+file sharing, and video streaming as data lost would be just some pixels causing lower quality. Therefore, TCP is more 
+accurate, and UDP is much more faster even though it does not care whether data has been received or not.
+
+5. Session (say) - 
+The session layer is used to maintain an active session between two devices connected to the network. When a connection 
+is succesfully active, so is the session. The session layers contains checkpoints so that if data is lost the process 
+doesn't have to start again, it can just resume from where it left from.
+
+6. Presentation (politicians) - 
+This layer is responsible for standardizing the data into a universal format that is readable by different devices. There 
+are multiple models of devices on a network and each have their own integrated/ preffered format to read/ write data in, 
+but this layer just formats it so it can be displayed in the same way on the destination as it was at the source. For 
+example, there are different email clients with different formats, but the contents of the email will still be the same. 
+So this layer acts as a translator.
+
+7. Application (all) - 
+The last layer is what we actually see on our devices. This is implemented through a GUI (graphical user interface), which
+is the front face of the data. A clean, interactive visual of data sent or recieved. Examples include browsers, email 
+clients, file servers etc. 
+
+Although the abreviation is said starting from Application layer (all), the order is from reverse and it starts from 
+the Physical layer (physics). So techinchally if we track how data is sent across a network, the path would be - physics 
+does nani teri say politicians all. Or conviniently "Please Do Not Take Science People Aggresively" - Physical, Data link, 
+Network, Transport, Session, Presentation, Application.
