@@ -1,0 +1,62 @@
+10/7/25
+
+Today I learnt about packets and frames, and about basic protcols like TCP and UDP. I also went over some common ports 
+that we use on a daily basis.
+
+Packets and frames are small units of data that are combined to form complete data we see on our devices. Frame is at 
+layer 2 of the OSI model - data link layer. So it does not have any IP address information at that point. However, a 
+packet is transmitted over the network layer so it has an IP address associated with it. A frame is like putting an 
+envelope inside an envelope. The first envelope is the packet (since it will have an address to it), and the second 
+envelope inside is the frame which contains the data. This process is known as encapsulation as the frame (encapsulated 
+information) is stripped away. Packets and frames are an efficient way to send data across the internet since they are 
+smaller pieces of data and have minimal chance of bottlenecking the network. The data is eventually assembled - as 
+discussed in the OSI model. 
+
+A packet has various headers to it:
+1. Time to live - how long does the packet survives when travelling across the network (if it doesn't manage to reach the 
+destination or gets lost), to prevent network clog.
+2. Checksum - an integreity checking for protocols such as TCP, which help verify the data integrity by comparing 
+original checksum with newly calculated one after data is recieved (its a mathematical formula).
+3. Source address - the IP address of the data sender.
+4. Destination address - the IP address of the data reciever.
+
+
+TCP/ IP (Three way handshake):
+This is another protocol (rule) used in networking whenever data is sent. The TCP/ IP model consists of 4 layers similar 
+to the OSI model: Application, Transport, Internet, and Network Interface (ATIN). Information is added to each layer 
+before it reaches the final Application layer which we see on our devices (the GUI).
+The TCP protocol is connection-based meaning it maintains a constant connection between two devices (as discussed before). 
+TCP guarantees that data is sent to the destination, and this process is known as the three way handshake:
+
+There are some flags to the TCP protocol:
+1. Source port - port number (0-65535) that is opened by the sender when sending a TCP packet - randomly chosen.
+2. Destination port - port number the destination is running like 80 (web server) - not chosen randomly.
+3. Source IP - ...
+4. Destination IP - ...
+5. Sequence number - a random number sequence is generated when data is being sent. Its like tagging each packet for 
+correct assembling order later on - incremented by one, like a head count.
+6. Acknowledgement number - +1 of the sequence number generated for a piece of data.
+7. Checksum - TCP integreity. Is a mathemtical claculation where output is remembered to compare when data has been 
+recieved.
+8. Data - The bytes of a file that is being sent.
+9. Flag - Determines how data has to be handled. Different flags exist.
+
+Three Way Handshake process:
+1. SYN - initial message sent by sender to initiate a connection with recieving device - synchronise.
+2. SYN/ ACK - message sent by recieving device acknowleding that sucesfull connection has been estabilished.
+3. ACK - acknowledgement message sent by either party confirming transaction of some data packets.
+4. DATA - message through which data is sent.
+5. FIN - final message to properly close the connection - finish.
+6. RST - this packet abruptly ends all communication, last resort when there is a problem during process. 
+
+Best practice is to close a TCP connection as it takes up more computer resources than other protocols like the UDP.
+
+UDP/IP:
+This is another protocol used when 2 devices communicate with each other. It is much more faster than TCP/IP because 
+it doesn't have any checksum to ensure data integrity. This protocol doesn't care if data has been recieved or not. 
+
+Use case: video streaming, or video call as packets lost are just pixels reducing the quality of visuals.
+
+So it is best to use TCP during file transfer instead as it ensures data has been recieved.
+
+This makes TCP/ IP a connection-based protocol and the UDP/ IP a stateless protocol.
