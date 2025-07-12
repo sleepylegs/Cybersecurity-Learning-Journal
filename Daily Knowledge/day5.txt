@@ -1,0 +1,59 @@
+11/7/25
+
+Today I finished learning about network fundamentals. I gained knowledge about port forwarding, firewalls, and VPNs.
+
+Port forwarding:
+Port forwarding is a process implemented by the adminstrator to allow public connections to their services such as their 
+website. If port fowarding did not exist everything would only be accessible within a private network. However, since 
+this exists, people can now allow others to view their services on the Internet (websites, games etc). This is set up 
+through the router. An example of this is setting up a minecraft server to play with friends. You will require a static IP 
+address, one that does not change (dynamic), and your friends can use it to connect to port 25565 (eg: 192.168.1.1:25565).
+
+
+Firewalls:
+These are basically a physical barrier between one's network and network traffice (incoming and outgoing). It has a set of 
+defined rules (by the adminstrator/ user) on what traffice is allowed/ denied. This is used as a security feature to prevent 
+any DDOS (distributed denial of service) attack on a network. Firewalls operate at layer 3 (Network) and layer 4 (Transport) 
+of the OSI model.
+
+1. Stateful - This type of firewall blocks network traffice based upon the entire connection of a device. For example, if 
+the connection from the host is bad, it will block the entire device from sending any traffice whatsoever. Much more 
+resource consumption takes place.
+
+2. Stateless - This firewall blocks individual packets. A bad packet does not render the entire device to be blocked. Much 
+faster than stateful and great at recieving large amounts of traffice. However, these firewalls are often dumb as they 
+are only as effective as the rules defined within them, if the rule does not exactly match for a certain negative packet, 
+the entire effectiveness of the firewall is useless.
+
+VPNs:
+These are called virtual private networks and they are a technology that creates a separate communication path for 
+networks over the Internet, as part of the process which is known as tunneling. Devices that are part of this tunnel 
+have their own private network so any data they send of recieve is encrypted. This is beneficial in an office scenario 
+as VPNs allow for connection to a network from any geographical location. For example, to connect to the main HQ in sweden 
+an employee will connect to an VPN in sweden and then access the main HQ database.
+
+Advantages:
+- No geographical limitations
+- Privacy
+- Anonymity
+
+Technology:
+1. PPP - is used by PPTP to allow for authentication and private data encryption. VPNs use private key and public key 
+certificate (similar to SSH) and these must match for connection to be sucesfull. This technology is not capable of 
+leaving a network by itself.
+2. PPTP (point to point tunneling protocol) - allows data from PPP to travel and leave a network. Often weakly encrypted.
+3. IPSec (initernet protocol security) - encrypts data using IP framework. Difficult to set up, but strong as compared to 
+alternatives.
+
+Extra details about switches:
+Switches are of both layer 2 (data link) and layer 3 (network) type. The difference is that layer 2 switch does not have 
+any IP address associated to it (only frames as discussed before). However, layer 3 switches are more sophisticated 
+and have some responsibility like the router. They send frames like layer 2 swtiches, but also route packets to other 
+devices using the IP. In general switches are used to connect to multiple devices using ethernet cables.
+
+VLAN:
+A virtual Local Area Network (VLAN) is a way fo separating two networks from each other. For example, in a business 
+scenario, the sales department and the accounting department will each have their own private IP addresses, and their own 
+network traffic, which is un-readeable and un-writeable by the other respectively. Although, both of these private networks 
+will be connected to the same switch which connects to the same router. This split allows for networks to be treated 
+separately, as each side will have specific communication and rules.
