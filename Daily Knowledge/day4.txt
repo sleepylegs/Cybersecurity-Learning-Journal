@@ -60,3 +60,12 @@ Use case: video streaming, or video call as packets lost are just pixels reducin
 So it is best to use TCP during file transfer instead as it ensures data has been recieved.
 
 This makes TCP/ IP a connection-based protocol and the UDP/ IP a stateless protocol.
+
+Common protocols:
+1. FTP (file transfer protocol) - 21 - used when file sharing on a client-server model meaning you download files from a
+central location.
+2. SSH (secure shell) - 22 - securely loin to systems via text-based interface.
+3. HTTP (hypertext transfer protocol) - 80 - used in the www, browsers use it to download images and video of web pages.
+4. HTTPS (hypertext transfer protocol secure) - 443 - same as http but secured using encryption.
+5. SMB (server message block) - 445 - similar to FPT but allowes to sahre devices like printers.
+6. RDP (remote desktop protocol) - 3389 - secure logging in to a system using visual desktop interface, unlike ssh.
